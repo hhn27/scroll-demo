@@ -25,3 +25,24 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+html{
+  box-sizing: border-box;
+}
+
+*, ::before, ::after{
+  box-sizing: inherit;
+}
+
+span,p,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+
+.tissue{
+  display: none;
+}
+
+.tissue.active{
+  display: block;
+}
