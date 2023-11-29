@@ -4,7 +4,7 @@ export default function Home() {
   
   return (
       <>
-      <Head>
+      {/* <Head>
         <link rel="preload" href="//Tissues_050000.png" as="image"></link>
         <link rel="preload" href="//Tissues_050001.png" as="image"></link>
         <link rel="preload" href="//Tissues_050002.png" as="image"></link>
@@ -103,7 +103,7 @@ export default function Home() {
         <link rel="preload" href="//Tissues_050095.png" as="image"></link>
         <link rel="preload" href="//Tissues_050096.png" as="image"></link>
         <link rel="preload" href="//Tissues_050097.png" as="image"></link>
-      </Head>
+      </Head> */}
       <IndexHome></IndexHome>
       </>
   )
