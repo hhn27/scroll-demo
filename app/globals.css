@@ -39,10 +39,14 @@ span,p,h1,h2,h3,h4,h5,h6{
   padding: 0;
 }
 
+.frame{
+  -webkit-backface-visibility: hidden;
+}
+.frame>div{
+  -webkit-backface-visibility: hidden;
+}
 .tissue{
   display: none;
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
 }
 .tissue.active{
   display: block;
