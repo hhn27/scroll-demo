@@ -41,9 +41,9 @@ span,p,h1,h2,h3,h4,h5,h6{
 
 .tissue{
   display: none;
-  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 }
 .tissue.active{
   display: block;
-  -webkit-transform: translate3d(0, 0, 0);
 }
