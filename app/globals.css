@@ -40,12 +40,8 @@ span,p,h1,h2,h3,h4,h5,h6{
 }
 
 .tissue{
-  display: none;
-  -webkit-animation: none !important;
-  animation: none !important;
+  visibility: hidden;
 }
 .tissue.active{
-  display: block;
-  -webkit-animation: none !important;
-  animation: none !important;
+  visibility: visible;
 }
