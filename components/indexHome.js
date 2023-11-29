@@ -34,9 +34,9 @@ export default function IndexHome(){
     }, [])
 
     useLayoutEffect(() => {
+        ScrollTrigger.normalizeScroll(true)
         const list = document.querySelectorAll(".tissue")
         list.forEach((item, index) => {
-            ScrollTrigger.normalizeScroll(true)
             ScrollTrigger.create({
                 trigger: '.frame',
                 start: `start+=${window.innerWidth * 0.02 * index}vw`,
