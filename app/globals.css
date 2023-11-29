@@ -39,15 +39,13 @@ span,p,h1,h2,h3,h4,h5,h6{
   padding: 0;
 }
 
-.frame{
-  -webkit-backface-visibility: hidden;
-}
-.frame>div{
-  -webkit-backface-visibility: hidden;
-}
 .tissue{
   display: none;
+  -webkit-animation: none !important;
+  animation: none !important;
 }
 .tissue.active{
   display: block;
+  -webkit-animation: none !important;
+  animation: none !important;
 }
