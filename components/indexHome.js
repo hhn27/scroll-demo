@@ -31,13 +31,6 @@ export default function IndexHome(){
                 );
             }
         )()
-        document.querySelectorAll(".tissue").forEach((item, index) => {
-            item.src= `/Tissues_05000${index}.png`;
-        })
-        // for( var i=0; i<98; i++){
-        //     document.querySelectorAll(".tissue")
-        //     imgPreload.src= `/Tissues_05000${i}.png`;
-        // }
     }, [])
 
     useLayoutEffect(() => {
