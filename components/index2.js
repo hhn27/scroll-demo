@@ -148,8 +148,8 @@ export default function IndexHome(){
             onLeaveBack: self => {
               // item.classList.remove("active")
               gsap.to(item, {
-                zIndex:'10',
-                opacity:'1',
+                zIndex:'1',
+                opacity:'0',
                 duration:'0'
               })
               for (let i = 0; i < list.length; i++) {
@@ -162,7 +162,7 @@ export default function IndexHome(){
                   })
                 }
                 else {
-                  if (i !== index) {
+                  if (i !== index-1) {
                     // list[i].classList.remove("active")
                     gsap.to(list[i], {
                       zIndex:'1',
