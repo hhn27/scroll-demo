@@ -98,16 +98,7 @@ export default function IndexHome(){
                                 })
                                 // list[i].classList.remove("active")
                             }
-                            else{
-                                // if(i-1>=0){
-                                gsap.to(list[i], {
-                                    zIndex: '10',
-                                    opacity: '1',
-                                    duration: '0'
-                                })
-                                // list[i].classList.add("active")
-                                // }
-                            }  
+                            
                         }                   
                     }
                 },
