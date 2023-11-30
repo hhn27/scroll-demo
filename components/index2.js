@@ -192,7 +192,7 @@ return(
     <div className='bg-black h-[250vw] frame'>
         <div className='flex sticky top-0 justify-center'>
             <div className='img-container w-[50vw] h-[50vw] relative'>
-            {/* <div className='w-full h-full absolute top-0 left-0 object-contain tissue active'></div> */}
+            <div className='w-full h-full absolute top-0 left-0 object-contain tissue active'></div>
             {imagePaths.map((item, index) => 
                 <div key={index} className='w-full h-full absolute top-0 left-0 tissue' style={{background: `url(${item})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: 'contain'}}></div>
             )}
