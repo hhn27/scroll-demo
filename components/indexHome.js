@@ -108,81 +108,23 @@ export default function IndexHome(){
     // const isMobile = useMediaQuery({ query: '(max-width: 767.9px)' })
     gsap.registerPlugin(ScrollTrigger);
     useLayoutEffect(() => {
-    const list = document.querySelectorAll(".tissue");
-    list.forEach((item, index) => {
-        // gsap.to(item, {
-        // scrollTrigger: {
-        //     trigger: '.frame',
-        //     start: 'top center',
-        //     end: 'bottom center',
-        //     scrub: true,
-        //     onUpdate: self => {
-        //     const imagePath = imagePaths[Math.floor(self.progress * imagePaths.length)];
-        //     requestAnimationFrame(() => {
-        //         item.style.backgroundImage = `url(${imagePath})`;
-        //     });
-        //     }
-        // }
-        // });
+    const list = document.querySelector(".tissue");
+    // list.forEach((item, index) => {
+    //     gsap.to(item, {
         ScrollTrigger.create({
             trigger: '.frame',
-            start: `start+=${window.innerWidth * 0.02 * index}vw`,
-            onEnter: self => {
-              // item.classList.add("active")
-              gsap.to(item, {
-                zIndex:'10',
-                opacity:'1',
-                duration:'0'
-              })
-              for (let i = 0; i < list.length; i++) {
-                if (index !== i) {
-                  // list[i].classList.remove("active")
-                  gsap.to(list[i], {
-                    zIndex:'1',
-                    opacity:'0',
-                    duration:'0'
-                  })
-                }
-              }
-            },
-            onLeaveBack: self => {
-              // item.classList.remove("active")
-              gsap.to(item, {
-                zIndex:'10',
-                opacity:'1',
-                duration:'0'
-              })
-              for (let i = 0; i < list.length; i++) {
-                if (index == 0) {
-                  // list[0].classList.add("active")
-                  gsap.to(list[0], {
-                    zIndex:'10',
-                    opacity:'1',
-                    duration:'0'
-                  })
-                }
-                else {
-                  if (i !== index) {
-                    // list[i].classList.remove("active")
-                    gsap.to(list[i], {
-                      zIndex:'1',
-                      opacity:'0',
-                      duration:'0'
-                    })
-                  }
-                  else {
-                    // list[i].classList.add("active")
-                    gsap.to(list[i], {
-                      zIndex:'10',
-                      opacity:'1',
-                      duration:'0'
-                    })
-                  }
-                }
-              }
-            },
-          })
-    });
+            start: 'top center',
+            end: 'bottom center',
+            scrub: true,
+            onUpdate: self => {
+            const imagePath = imagePaths[Math.floor(self.progress * imagePaths.length)];
+            requestAnimationFrame(() => {
+                list.style.backgroundImage = `url(${imagePath})`;
+            });
+            }
+        })
+        // });
+        
     }, []);
 
     const array = new Array(97).fill(0)
@@ -192,10 +134,10 @@ return(
     <div className='bg-black h-[250vw] frame'>
         <div className='flex sticky top-0 justify-center'>
             <div className='img-container w-[50vw] h-[50vw] relative'>
-            {/* <div className='w-full h-full absolute top-0 left-0 object-contain tissue active'></div> */}
-            {imagePaths.map((item, index) => 
+            <div className='w-full h-full absolute top-0 left-0 object-contain tissue active'></div>
+            {/* {imagePaths.map((item, index) => 
                 <div key={index} className='w-full h-full absolute top-0 left-0 tissue' style={{background: `url(${item})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: 'contain'}}></div>
-            )}
+            )} */}
             {/* {array?.map((item,index)=>{
                 <div key={index} className='w-full h-full absolute top-0 left-0 object-contain tissue'></div>
             })} */}
