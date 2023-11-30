@@ -50,6 +50,7 @@ export default function IndexHome(){
     }, [])
 
     useLayoutEffect(() => {
+        ScrollTrigger.normalizeScroll()
         const list = document.querySelectorAll(".tissue")
         list.forEach((item, index) => {
             ScrollTrigger.create({
@@ -74,12 +75,7 @@ export default function IndexHome(){
                     }
                 },    
                 onLeaveBack: self => {
-                    // item.classList.remove("active")
-                    gsap.to(item, {
-                        zIndex: '10',
-                        opacity: '1',
-                        duration: '0'
-                    })
+                    item.classList.remove("active")
                     for(let i=0; i<list.length; i++){
                         if(index==0){
                             gsap.to(list[0], {
@@ -90,7 +86,7 @@ export default function IndexHome(){
                             // list[0].classList.add("active")
                         }
                         else{
-                            if(i!==index){
+                            if(i!==index-1){
                                 gsap.to(list[i], {
                                     zIndex: '1',
                                     opacity: '0',
@@ -98,7 +94,16 @@ export default function IndexHome(){
                                 })
                                 // list[i].classList.remove("active")
                             }
-                            
+                            else{
+                                // if(i-1>=0){
+                                gsap.to(list[i], {
+                                    zIndex: '10',
+                                    opacity: '1',
+                                    duration: '0'
+                                })
+                                // list[i].classList.add("active")
+                                // }
+                            }  
                         }                   
                     }
                 },
@@ -227,7 +232,7 @@ return(
     <div className='h-[100vh]'>
 
     </div>
-    <div className='h-[100vh]'>
+    <div className='h-[50vh]'>
 
     </div>
     </div>
